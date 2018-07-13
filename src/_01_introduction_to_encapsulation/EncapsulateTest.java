@@ -1,0 +1,15 @@
+package _01_introduction_to_encapsulation;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class EncapsulateTest extends TestCase {
+	EncapsulateTheData d = new EncapsulateTheData();
+	@Test
+	
+	public void testSetItemsReceived() {
+		d.setItemsReceived(-3);
+		assertEquals(0,d.getItemsReceived());
+	}
+}
