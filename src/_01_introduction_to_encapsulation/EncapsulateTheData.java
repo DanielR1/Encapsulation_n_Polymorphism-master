@@ -32,11 +32,11 @@ public class EncapsulateTheData {
 		
 	}
 
-	private int getItemsReceived() {
+	public int getItemsReceived() {
 		return itemsReceived;
 	}
 
-	private void setItemsReceived(int itemsReceived) {
+	public void setItemsReceived(int itemsReceived) {
 		if(itemsReceived>=0) {
 		this.itemsReceived = itemsReceived;
 		}
@@ -45,31 +45,33 @@ public class EncapsulateTheData {
 		}
 	}
 
-	private float getDegreesTurned() {
+	public float getDegreesTurned() {
 		return degreesTurned;
 	}
 
-	private void setDegreesTurned(float degreesTurned) {
-		for (int i = 0; i < 1; i++) {
+	public void setDegreesTurned(float degreesTurned) {
+		for (int i = 1; i < 2; i++) {
+			i--;
 		if(degreesTurned>360) {
 			degreesTurned-=360;
-			i--;
+		
 		}
 		else if(degreesTurned<0) {
 			degreesTurned+=360;
-			i--;
+			
 		}
 		else {
 		this.degreesTurned = degreesTurned;
+		i++;
 		}
 	}
 	}
 
-	private String getNomenclature() {
+	public String getNomenclature() {
 		return nomenclature;
 	}
 
-	private void setNomenclature(String nomenclature) {
+	public void setNomenclature(String nomenclature) {
 		if(nomenclature.equals("")) {
 			this.nomenclature=" ";
 		}
@@ -78,11 +80,11 @@ public class EncapsulateTheData {
 		}
 	}
 
-	private Object getMemberObj() {
+	public Object getMemberObj() {
 		return memberObj;
 	}
 
-	private void setMemberObj(Object memberObj) {
+	public void setMemberObj(Object memberObj) {
 		
 		this.memberObj = memberObj;
 	}
