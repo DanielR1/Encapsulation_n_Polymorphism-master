@@ -1,23 +1,25 @@
 package _03_polymorphs;
 
 import java.awt.Graphics;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
-public abstract class Polymorph {
-     int x;
-     int y;
-     int width;
-     int height;
-    
-    Polymorph(int x, int y){
-   	 this.setX(x);
-   	 this.setY(y);
-    }
-    
-    public void update(){
-   	 
-    }
-    
-    public abstract void draw(Graphics g);
+public abstract class Polymorph implements MouseMotionListener, MouseListener {
+	int x;
+	int y;
+	int width;
+	int height;
+
+	Polymorph(int x, int y) {
+		this.setX(x);
+		this.setY(y);
+	}
+
+	public void update() {
+
+	}
+
+	public abstract void draw(Graphics g);
 
 	int getWidth() {
 		return width;

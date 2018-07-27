@@ -1,22 +1,26 @@
 package _03_polymorphs;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
-public class BluePolymorph extends Polymorph {
+import javax.imageio.ImageIO;
 
-	BluePolymorph(int x, int y) {
+public class ImageMorph extends Polymorph {
+	BufferedImage image;
+
+	ImageMorph(int x, int y) {
 		super(x, y);
 		width = 50;
 		height = 50;
-
-	}
-
-	@Override
-	public void draw(Graphics g) {
-		g.setColor(Color.blue);
-		g.fillRect(getX(), getY(), getWidth(), getHeight());
+		try {
+			image = ImageIO.read(this.getClass().getResourceAsStream("mc.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -29,6 +33,12 @@ public class BluePolymorph extends Polymorph {
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		// TODO Auto-generated method stub
+		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	@Override

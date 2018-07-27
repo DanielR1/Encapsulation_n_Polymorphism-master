@@ -3,20 +3,27 @@ package _03_polymorphs;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 
-public class BluePolymorph extends Polymorph {
+public class MouseMorph extends Polymorph implements MouseMotionListener {
 
-	BluePolymorph(int x, int y) {
+	MouseMorph(int x, int y) {
 		super(x, y);
 		width = 50;
 		height = 50;
-
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void draw(Graphics g) {
-		g.setColor(Color.blue);
-		g.fillRect(getX(), getY(), getWidth(), getHeight());
+		// TODO Auto-generated method stub
+		g.setColor(Color.WHITE);
+		g.fillRect(getX() - 20, getY() - 45, getWidth(), getHeight());
+
+	}
+
+	public void update() {
+
 	}
 
 	@Override
@@ -28,7 +35,8 @@ public class BluePolymorph extends Polymorph {
 	@Override
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
-
+		x = e.getX();
+		y = e.getY();
 	}
 
 	@Override
