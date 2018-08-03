@@ -39,10 +39,15 @@ public class ClickMorph extends Polymorph implements MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		if (getX() - 25 <= e.getX() && e.getX() <= getX() + 25 && getY() - 25 <= e.getY() && e.getY() <= getY() + 25) {
+		if ((getX() - 25) <= e.getX()-20 && e.getX()-20 <= (getX() + 25) && (getY() - 25) <= e.getY()-45 && e.getY()-45 <= (getY() + 25)) {
 			JOptionPane.showMessageDialog(null, "urmom");
+			System.out.println("ll");
 		}
 		System.out.println("c");
+		System.out.println(e.getX());
+		System.out.println(e.getY());
+		System.out.println(getX());
+		System.out.println(getY());
 	}
 
 	@Override

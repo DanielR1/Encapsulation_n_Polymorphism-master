@@ -19,14 +19,14 @@ public class MovingMorph extends Polymorph {
 		// TODO Auto-generated method stub
 		g.setColor(Color.black);
 		g.fillRect(getX(), getY(), getWidth(), getHeight());
-		System.out.println("draw");
+		//System.out.println("draw");
 
 	}
 
 	public void update() {
 		x -= (int) 10 * Math.sin(t / 8);
 		y += (int) 10 * Math.cos(t / 8);
-		System.out.println("update");
+		//System.out.println("update");
 		t++;
 	}
 
